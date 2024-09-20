@@ -13,10 +13,7 @@ go-to: start_menu_2
 @start_menu_2
 
 - @start: Start game
-- @election_simulation: Election simulation
 - @credits: Credits
-- @game_over.achievements
-
 
 @start
 on-arrival: {!
@@ -30,19 +27,16 @@ Q.month_actions = 0;
 
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
-Q.historical_mode = 0;
-// old demographics
-Q.old_demographics = 0;
 
 // 0 = alternate history with no magic, 1 = secret history with magic
 Q.truemagic = 0;
 
-// illuminated agents are party resources
+// TODO: adapt
 Q.resources = 20;
-// ordainment is party dues
+// TODO: adapt
 Q.dues = 2;
 
-// the state of the conspiracy
+// TODO: ADAPT the state of the conspiracy
 // overall dissent reduces every increase in party support.
 Q.dissent = 0.05;
 Q.dissent_percent = 5;
@@ -426,12 +420,12 @@ Q.spd_no_confidence = 0;
 // was the last SPD government taken down in a vote of no confidence by right-wing coalition partners?
 Q.no_confidence_against_spd = 0;
 
-// Advisors/Leaders
-Q.n_advisors = 3;
-// timer - this decrements by 1 every turn, and is set to 5 whenever an advisor action is used, so that you can only use one advisor action every 5 months.
+// masters/Leaders
+Q.n_masters = 3;
+// timer - this decrements by 1 every turn, and is set to 5 whenever an master action is used, so that you can only use one master action every 5 months.
 // let's just put all of the timers here...
 // most party affairs and government affairs cards are on a timer.
-Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
+Q.timers = ['master_action', 'confronting_nazis', 'crisis_program',
             'fundraising', 'ideology',
             'inter_party_relationships', 'international_relations',
             'iron_front', 'media', 'enemies',
@@ -451,7 +445,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'sa_ban', 'sh_ban',
             'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis'];
-Q.advisor_action_timer = 0;
+Q.master_action_timer = 0;
 // party affairs timers
 Q.confronting_nazis_timer = 0;
 Q.crisis_program_timer = 0;
@@ -503,46 +497,46 @@ Q.sh_ban_timer = 0;
 Q.kpd_ultimatum_timer = 0;
 
 
-// all the initial advisors are centrists.
-Q.wels_advisor = 1; // Otto Wels
-Q.muller_advisor = 1; // Hermann Müller
+// all the initial masters are centrists.
+Q.wels_master = 1; // Otto Wels
+Q.muller_master = 1; // Hermann Müller
 Q.muller_dead = 0;
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
-Q.crispien_advisor = 0; // Arthur Crispien
-Q.hilferding_advisor = 1; // Rudolf Hilferding
+Q.crispien_master = 0; // Arthur Crispien
+Q.hilferding_master = 1; // Rudolf Hilferding
 
-// left advisors
-Q.sender_advisor = 0; // Toni Sender
-Q.levi_advisor = 0; // Paul Levi
+// left masters
+Q.sender_master = 0; // Toni Sender
+Q.levi_master = 0; // Paul Levi
 Q.levi_dead = 0;
-Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
-Q.seydewitz_advisor = 0; // Max Seydewitz
+Q.rosenfeld_master = 0; // Kurt Rosenfeld
+Q.seydewitz_master = 0; // Max Seydewitz
 
-// centrist alternate advisors
-Q.pfulf_advisor = 0; // Antonie Pfülf
-Q.breitscheid_advisor = 0; // Rudolf Breitscheid
+// centrist alternate masters
+Q.pfulf_master = 0; // Antonie Pfülf
+Q.breitscheid_master = 0; // Rudolf Breitscheid
 
-// Reformist advisors
-Q.severing_advisor = 0; // Carl Severing
-Q.braun_advisor = 0; // Otto Braun
-Q.juchacz_advisor = 0; // Marie Juchacz
-Q.baade_advisor = 0; // Fritz Baade
+// Reformist masters
+Q.severing_master = 0; // Carl Severing
+Q.braun_master = 0; // Otto Braun
+Q.juchacz_master = 0; // Marie Juchacz
+Q.baade_master = 0; // Fritz Baade
 
-// Labor advisors
-Q.leipart_advisor = 0; // Theodor Leipart
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
-Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
+// Labor masters
+Q.leipart_master = 0; // Theodor Leipart
+Q.aufhauser_master = 0; // Siegfried Aufhäuser
+Q.woytinsky_master = 0; // Wladimir Woytinsky (post-1930)
 
-// Revisionist advisors
-Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
+// Revisionist masters
+Q.mierendorff_master = 0; // Carlo Mierendorf (post-1930)
 
-Q.leber_advisor = 0; // Julius Leber (post-1930)
-Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
+Q.leber_master = 0; // Julius Leber (post-1930)
+Q.schumacher_master = 0; // Kurt Schumacher (post-1930)
 
-// Nonfactional advisors
-Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
-Q.radbruch_advisor = 0; // Gustav Radbruch
-Q.stampfer_advisor = 0; // Friedrich Stampfer
+// Nonfactional masters
+Q.hirschfeld_master = 0; // Magnus Hirschfeld
+Q.radbruch_master = 0; // Gustav Radbruch
+Q.stampfer_master = 0; // Friedrich Stampfer
 !}
 set-bg: img/map_2.jpg
 new-page: true
