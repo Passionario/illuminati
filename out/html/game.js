@@ -16,7 +16,7 @@
     // Add your custom code here.
   };
 
-  var TITLE = "Social Democracy: An Alternate History" + '_' + "Autumn Chen";
+  var TITLE = "Rise of Illuminati" + '_' + "Comrade Passionario";
 
   // the url is a link to game.json
   // TODO; 
@@ -205,7 +205,7 @@
 
   window.onload = function() {
     window.dendryUI.loadSettings();
-    window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
+    window.pinnedCardsDescription = "Inner Circle cards - actions are only usable once per 6 months.";
   };
 
 }());
